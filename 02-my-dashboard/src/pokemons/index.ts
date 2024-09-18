@@ -1,4 +1,3 @@
-import { Pokemon } from './interfaces/pokemon';
 export { PokemonGrid } from './components/PokemonGrid';
 
 export type { PokemonResponse } from './interfaces/pokemons-response';
