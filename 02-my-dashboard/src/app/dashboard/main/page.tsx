@@ -1,4 +1,4 @@
-import { SimpleWidget } from '../../../components/dashboard/SimpleWidget';
+// import { SimpleWidget } from '../../../components/dashboard/SimpleWidget';
 import { WidgetsGrid } from '../../../components/dashboard/WidgetsGrid';
 
 
