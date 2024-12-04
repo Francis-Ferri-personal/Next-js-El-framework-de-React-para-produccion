@@ -3,9 +3,9 @@
 import { FormEvent, useState } from "react";
 import { IoTrashOutline } from "react-icons/io5";
 
-// import * as todosApi from '@/todos/helpers/todos';
+import * as todosApi from '@/todos/helpers/todos';
 import { useRouter } from "next/navigation";
-import { addTodo, deleteCompleted } from "../actions/todo-actions";
+import { deleteCompleted } from "../actions/todo-actions";
 
 export const NewTodo = () => {
 
@@ -17,9 +17,11 @@ export const NewTodo = () => {
         if (description.trim().length === 0) return;
 
         console.log("Form submitted", description);
-        await addTodo(description);
+        // mandaremos aa llamar el create TODO mediate el RESTFUL API no el serevr action
+        // await addTodo(description);
+        await todosApi.createTodo(description)
         setdescription('');
-        // router.refresh();
+        router.refresh();
     }
 
     // const deleteCompleted = async() => {
